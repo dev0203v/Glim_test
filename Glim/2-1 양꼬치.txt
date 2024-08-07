@@ -1,0 +1,19 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(int n, int k) {
+    int answer = 0;
+    int food_price = 12000;
+    int drink_price = 2000;
+    int service_drink = 0;
+    
+    if (0 < n  && n < 1000)
+        if (n/10 <= k && k < 1000)
+            service_drink = n/10;
+    
+    answer = n * food_price + k * drink_price - service_drink * drink_price;
+
+    return answer;
+}
